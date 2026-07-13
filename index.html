@@ -420,284 +420,588 @@
 
 
 
-        <!-- =================================================
-             PROJECTS SECTION
-             ================================================= -->
+       <!-- =================================================
+     PROJECTS SECTION
+     ================================================= -->
 
-        <section class="section" id="projects">
+<section class="section" id="projects">
 
-            <div class="container">
+    <div class="container">
 
-                <p class="section-label">
-                    SELECTED WORK
-                </p>
+        <p class="section-label">
+            SELECTED WORK
+        </p>
 
+        <h2 class="section-title">
+            Featured Projects
+        </h2>
 
-                <h2 class="section-title">
-                    Featured Projects
-                </h2>
+        <p class="section-description">
+            A selection of projects covering business intelligence,
+            SQL analytics, cloud data engineering, dashboard development,
+            research analytics, and full-stack application development.
+        </p>
 
 
-                <p class="section-description">
+        <!-- Project Filter -->
 
-                    A selection of projects covering business intelligence,
-                    SQL analytics, cloud data engineering, dashboard development,
-                    and application development.
+        <div class="project-filters">
 
-                </p>
+            <button
+                class="filter-btn active"
+                data-filter="all"
+            >
+                All
+            </button>
 
+            <button
+                class="filter-btn"
+                data-filter="analytics"
+            >
+                Analytics
+            </button>
 
-                <div class="projects-grid">
+            <button
+                class="filter-btn"
+                data-filter="engineering"
+            >
+                Data Engineering
+            </button>
 
+            <button
+                class="filter-btn"
+                data-filter="application"
+            >
+                Applications
+            </button>
 
-                    <!-- PROJECT 01 -->
+        </div>
 
-                    <article class="project-card">
 
-                        <div class="project-number">
-                            01
-                        </div>
+        <div class="projects-grid project-showcase-grid">
 
 
-                        <h3>
-                            Retail Sales & Inventory Analytics Platform
-                        </h3>
+            <!-- ==========================================
+                 PROJECT 01
+                 Retail Sales & Inventory Analytics
+                 ========================================== -->
 
+            <article
+                class="project-card project-showcase-card"
+                data-category="analytics"
+            >
 
-                        <p>
+                <div class="project-image">
 
-                            Enterprise-scale analytics project designed to
-                            analyze sales performance, inventory efficiency,
-                            customer behaviour, product trends, and operational
-                            KPIs using SQL and Power BI.
+                    <img
+                        src="assets/projects/retail-analytics.png"
+                        alt="Retail Sales and Inventory Analytics Power BI dashboard"
+                        loading="lazy"
+                    >
 
-                        </p>
+                    <div class="project-image-overlay">
 
+                        <span>
+                            Power BI Dashboard
+                        </span>
 
-                        <div class="project-tags">
-
-                            <span>SQL</span>
-
-                            <span>Power BI</span>
-
-                            <span>Excel</span>
-
-                            <span>Data Analytics</span>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- PROJECT 02 -->
-
-                    <article class="project-card">
-
-                        <div class="project-number">
-                            02
-                        </div>
-
-
-                        <h3>
-                            Azure Data Engineering Pipeline
-                        </h3>
-
-
-                        <p>
-
-                            End-to-end cloud data engineering solution using
-                            Azure Data Factory for orchestration, Databricks
-                            for data transformation, Azure Synapse Analytics
-                            for analytics, and Azure Key Vault for secure
-                            credential management.
-
-                        </p>
-
-
-                        <div class="project-tags">
-
-                            <span>Azure</span>
-
-                            <span>ADF</span>
-
-                            <span>Databricks</span>
-
-                            <span>Synapse</span>
-
-                            <span>ETL</span>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- PROJECT 03 -->
-
-                    <article class="project-card">
-
-                        <div class="project-number">
-                            03
-                        </div>
-
-
-                        <h3>
-                            E-Commerce Analytics Dashboard
-                        </h3>
-
-
-                        <p>
-
-                            Interactive business intelligence solution analyzing
-                            revenue, customer behaviour, product performance,
-                            seller performance, payment methods, delivery
-                            operations, and geographic sales patterns.
-
-                        </p>
-
-
-                        <div class="project-tags">
-
-                            <span>Power BI</span>
-
-                            <span>SQL</span>
-
-                            <span>Data Modeling</span>
-
-                            <span>DAX</span>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- PROJECT 04 -->
-
-                    <article class="project-card">
-
-                        <div class="project-number">
-                            04
-                        </div>
-
-
-                        <h3>
-                            HR Analytics Dashboard
-                        </h3>
-
-
-                        <p>
-
-                            Workforce analytics dashboard focused on employee
-                            attrition, workforce demographics, department
-                            performance, job satisfaction, income trends,
-                            and factors influencing employee retention.
-
-                        </p>
-
-
-                        <div class="project-tags">
-
-                            <span>Looker Studio</span>
-
-                            <span>HR Analytics</span>
-
-                            <span>Dashboard</span>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- PROJECT 05 -->
-
-                    <article class="project-card">
-
-                        <div class="project-number">
-                            05
-                        </div>
-
-
-                        <h3>
-                            Smart Parking Analytics — ParkEase
-                        </h3>
-
-
-                        <p>
-
-                            Research and analytics project focused on smart
-                            parking adoption in Bangalore, incorporating survey
-                            data, statistical testing, correlation, regression,
-                            ANOVA, and business insights.
-
-                        </p>
-
-
-                        <div class="project-tags">
-
-                            <span>SPSS</span>
-
-                            <span>Statistics</span>
-
-                            <span>Research</span>
-
-                            <span>Business Analytics</span>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- PROJECT 06 -->
-
-                    <article class="project-card">
-
-                        <div class="project-number">
-                            06
-                        </div>
-
-
-                        <h3>
-                            IGNYT Fitness Application
-                        </h3>
-
-
-                        <p>
-
-                            Full-featured fitness platform integrating workout
-                            planning, exercise tracking, nutrition logging,
-                            Health Connect data, progress analytics,
-                            authentication, cloud synchronization, and Android
-                            deployment.
-
-                        </p>
-
-
-                        <div class="project-tags">
-
-                            <span>Next.js</span>
-
-                            <span>FastAPI</span>
-
-                            <span>Firebase</span>
-
-                            <span>Android</span>
-
-                            <span>Health Connect</span>
-
-                        </div>
-
-                    </article>
+                    </div>
 
                 </div>
 
-            </div>
 
-        </section>
+                <div class="project-content">
 
+                    <div class="project-top">
+
+                        <span class="project-number">
+                            01
+                        </span>
+
+                        <span class="project-category">
+                            DATA ANALYTICS
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Retail Sales & Inventory Analytics Platform
+                    </h3>
+
+
+                    <p>
+                        Enterprise-scale analytics project designed to
+                        analyze sales performance, inventory efficiency,
+                        customer behaviour, product trends, and operational
+                        KPIs using SQL and Power BI.
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>SQL</span>
+                        <span>Power BI</span>
+                        <span>Excel</span>
+                        <span>Data Analytics</span>
+
+                    </div>
+
+
+                    <div class="project-links">
+
+                        <a
+                            href="https://github.com/varun642002"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
+                        >
+                            View Project ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==========================================
+                 PROJECT 02
+                 Azure Data Engineering
+                 ========================================== -->
+
+            <article
+                class="project-card project-showcase-card"
+                data-category="engineering"
+            >
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/projects/azure-pipeline.png"
+                        alt="Azure Data Engineering pipeline architecture"
+                        loading="lazy"
+                    >
+
+                    <div class="project-image-overlay">
+
+                        <span>
+                            Cloud Data Engineering
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-top">
+
+                        <span class="project-number">
+                            02
+                        </span>
+
+                        <span class="project-category">
+                            DATA ENGINEERING
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Azure Data Engineering Pipeline
+                    </h3>
+
+
+                    <p>
+                        End-to-end cloud data engineering solution using
+                        Azure Data Factory for orchestration, Databricks
+                        for transformation, Synapse Analytics for analytics,
+                        and Key Vault for secure credential management.
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>Azure</span>
+                        <span>ADF</span>
+                        <span>Databricks</span>
+                        <span>Synapse</span>
+                        <span>ETL</span>
+
+                    </div>
+
+
+                    <div class="project-links">
+
+                        <a
+                            href="https://github.com/varun642002"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
+                        >
+                            View Project ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==========================================
+                 PROJECT 03
+                 E-Commerce Analytics
+                 ========================================== -->
+
+            <article
+                class="project-card project-showcase-card"
+                data-category="analytics"
+            >
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/projects/ecommerce-dashboard.png"
+                        alt="E-Commerce Analytics Power BI dashboard"
+                        loading="lazy"
+                    >
+
+                    <div class="project-image-overlay">
+
+                        <span>
+                            Business Intelligence
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-top">
+
+                        <span class="project-number">
+                            03
+                        </span>
+
+                        <span class="project-category">
+                            BUSINESS INTELLIGENCE
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        E-Commerce Analytics Dashboard
+                    </h3>
+
+
+                    <p>
+                        Interactive business intelligence solution analyzing
+                        revenue, customer behaviour, product performance,
+                        sellers, payment methods, delivery operations,
+                        and geographic sales patterns.
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>Power BI</span>
+                        <span>SQL</span>
+                        <span>DAX</span>
+                        <span>Data Modeling</span>
+
+                    </div>
+
+
+                    <div class="project-links">
+
+                        <a
+                            href="https://github.com/varun642002"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
+                        >
+                            View Project ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==========================================
+                 PROJECT 04
+                 HR Analytics
+                 ========================================== -->
+
+            <article
+                class="project-card project-showcase-card"
+                data-category="analytics"
+            >
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/projects/hr-analytics.png"
+                        alt="HR Analytics dashboard"
+                        loading="lazy"
+                    >
+
+                    <div class="project-image-overlay">
+
+                        <span>
+                            Workforce Analytics
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-top">
+
+                        <span class="project-number">
+                            04
+                        </span>
+
+                        <span class="project-category">
+                            HR ANALYTICS
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        HR Analytics Dashboard
+                    </h3>
+
+
+                    <p>
+                        Workforce analytics dashboard focused on employee
+                        attrition, workforce demographics, department
+                        performance, job satisfaction, income trends,
+                        and employee retention factors.
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>Looker Studio</span>
+                        <span>HR Analytics</span>
+                        <span>Dashboard</span>
+
+                    </div>
+
+
+                    <div class="project-links">
+
+                        <a
+                            href="https://github.com/varun642002"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
+                        >
+                            View Project ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==========================================
+                 PROJECT 05
+                 ParkEase
+                 ========================================== -->
+
+            <article
+                class="project-card project-showcase-card"
+                data-category="analytics"
+            >
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/projects/parkease.png"
+                        alt="ParkEase smart parking analytics project"
+                        loading="lazy"
+                    >
+
+                    <div class="project-image-overlay">
+
+                        <span>
+                            Research Analytics
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-top">
+
+                        <span class="project-number">
+                            05
+                        </span>
+
+                        <span class="project-category">
+                            RESEARCH & ANALYTICS
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Smart Parking Analytics — ParkEase
+                    </h3>
+
+
+                    <p>
+                        Research and analytics project focused on smart
+                        parking adoption in Bangalore, incorporating survey
+                        analysis, statistical testing, correlation,
+                        regression, ANOVA, and business insights.
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>SPSS</span>
+                        <span>Statistics</span>
+                        <span>Research</span>
+                        <span>Regression</span>
+
+                    </div>
+
+
+                    <div class="project-links">
+
+                        <a
+                            href="https://github.com/varun642002"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
+                        >
+                            View Project ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==========================================
+                 PROJECT 06
+                 IGNYT Fitness Application
+                 ========================================== -->
+
+            <article
+                class="project-card project-showcase-card"
+                data-category="application"
+            >
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/projects/ignyt-app.png"
+                        alt="IGNYT fitness tracking application"
+                        loading="lazy"
+                    >
+
+                    <div class="project-image-overlay">
+
+                        <span>
+                            Full-Stack Application
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-top">
+
+                        <span class="project-number">
+                            06
+                        </span>
+
+                        <span class="project-category">
+                            APPLICATION DEVELOPMENT
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        IGNYT Fitness Application
+                    </h3>
+
+
+                    <p>
+                        Full-featured fitness platform integrating workout
+                        planning, exercise tracking, nutrition logging,
+                        Health Connect, progress analytics, authentication,
+                        cloud synchronization, and Android deployment.
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>Next.js</span>
+                        <span>FastAPI</span>
+                        <span>Firebase</span>
+                        <span>Android</span>
+                        <span>Health Connect</span>
+
+                    </div>
+
+
+                    <div class="project-links">
+
+                        <a
+                            href="https://github.com/varun642002/hyrox-training-"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
+                        >
+                            View Project ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
 
 
         <!-- =================================================
