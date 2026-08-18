@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Index from "./pages/Index";
+import Jack from "./pages/Jack";
 import NotFound from "./pages/NotFound";
 
 const pageTransition = {
@@ -18,6 +19,7 @@ export default function App() {
       <motion.div key={location.pathname} {...pageTransition}>
         <Routes location={location}>
           <Route path="/" element={<Index />} />
+          <Route path="/jack" element={<Jack />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </motion.div>

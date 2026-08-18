@@ -1,7 +1,7 @@
-import type React from "react";
-import FadeIn from "./FadeIn";
-import AnimatedText from "./jack/AnimatedText";
-import { about } from "../lib/site";
+import FadeIn from "../FadeIn";
+import AnimatedText from "./AnimatedText";
+import { ContactButton } from "./Buttons";
+import { about, site } from "../../lib/site";
 
 const CORNERS = [
   {
@@ -34,11 +34,12 @@ const CORNERS = [
   },
 ];
 
-export default function AboutMe() {
+
+export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative flex min-h-screen flex-col items-center justify-center px-5 py-20 font-kanit sm:px-8 md:px-10"
+      className="relative flex min-h-screen flex-col items-center justify-center px-5 py-20 sm:px-8 md:px-10"
       style={{ background: "#0C0C0C" }}
     >
       {CORNERS.map((corner) => (
@@ -49,10 +50,6 @@ export default function AboutMe() {
           alt=""
           loading="lazy"
           aria-hidden
-          onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
-            // Remote decoration — if the host is gone, drop it silently.
-            e.currentTarget.style.display = "none";
-          }}
           delay={corner.delay}
           duration={0.9}
           x={corner.x}
@@ -81,20 +78,7 @@ export default function AboutMe() {
         </div>
 
         <FadeIn delay={0.3} y={20}>
-          <a
-            href="#contact"
-            className="inline-block rounded-full px-8 py-3 text-xs font-medium uppercase tracking-widest text-white transition-opacity duration-200 hover:opacity-90 active:opacity-75 sm:px-10 sm:py-3.5 sm:text-sm md:px-12 md:py-4 md:text-base"
-            style={{
-              background:
-                "linear-gradient(123deg, #18011F 7%, #B600A8 37%, #7621B0 72%, #BE4C00 100%)",
-              boxShadow:
-                "0px 4px 4px rgba(181, 1, 167, 0.25), 4px 4px 12px #7721B1 inset",
-              outline: "2px solid #E3E3E3",
-              outlineOffset: "-3px",
-            }}
-          >
-            Contact Me
-          </a>
+          <ContactButton href={`mailto:${site.email}`} />
         </FadeIn>
       </div>
     </section>
