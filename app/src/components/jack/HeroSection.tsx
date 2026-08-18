@@ -7,12 +7,13 @@ const NAV = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Projects", href: "#projects" },
-  { label: "Contact", href: `mailto:${site.email}` },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function HeroSection() {
   return (
     <section
+      id="home"
       className="relative flex h-screen flex-col"
       style={{ overflowX: "clip" }}
     >

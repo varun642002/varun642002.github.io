@@ -2,33 +2,27 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import type { MotionValue } from "framer-motion";
 import { LiveProjectButton } from "./Buttons";
+import { works } from "../../lib/site";
 
-const PROJECTS = [
-  {
-    no: "01",
-    name: "ForgeInsight",
-    category: "AI Analytics Platform",
-    href: "https://ai-data-analytics-workspace.vercel.app/",
-    linkLabel: "Live Project",
-    images: ["/art/work-forgeinsight.svg", "/art/explore-03.svg", "/art/explore-01.svg"],
-  },
-  {
-    no: "02",
-    name: "Retail Sales & Inventory",
-    category: "SQL • Power BI",
-    href: "/#work",
-    linkLabel: "View Details",
-    images: ["/art/work-retail.svg", "/art/explore-02.svg", "/art/work-ecommerce.svg"],
-  },
-  {
-    no: "03",
-    name: "HR Analytics Dashboard",
-    category: "Looker Studio",
-    href: "/#work",
-    linkLabel: "View Details",
-    images: ["/art/work-hr.svg", "/art/explore-05.svg", "/art/work-thesis.svg"],
-  },
+// Three images per card: the project's own artwork plus two studies, so the
+// grid stays full without inventing screenshots that do not exist.
+const FILLER = [
+  "/art/explore-01.svg",
+  "/art/explore-02.svg",
+  "/art/explore-03.svg",
+  "/art/explore-04.svg",
+  "/art/explore-05.svg",
+  "/art/explore-06.svg",
 ];
+
+const PROJECTS = works.map((work, i) => ({
+  no: work.no,
+  name: work.title,
+  category: work.kind,
+  href: work.href || "/#work",
+  linkLabel: work.href ? work.linkLabel : "View Details",
+  images: [work.image, FILLER[i % FILLER.length], FILLER[(i + 3) % FILLER.length]],
+}));
 
 const RADIUS = "rounded-[40px] sm:rounded-[50px] md:rounded-[60px]";
 
