@@ -3,6 +3,7 @@
 export const site = {
   name: "Varun S.",
   initials: "VS",
+  photo: "/profile.png",
   eyebrow: "PORTFOLIO '26",
   roles: ["Analyst", "Engineer", "Builder", "Scholar"],
   description:

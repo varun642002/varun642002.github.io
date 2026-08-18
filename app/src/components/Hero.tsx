@@ -88,7 +88,19 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 flex flex-col items-center px-6 text-center">
-        <span className="blur-in mb-8 text-xs uppercase tracking-[0.3em] text-muted">
+        <div className="blur-in relative mb-8 h-24 w-24 md:h-28 md:w-28">
+          <span className="accent-gradient absolute inset-0 rounded-full" />
+          <img
+            src={site.photo}
+            alt={`Portrait of ${site.name}`}
+            width={224}
+            height={224}
+            className="absolute inset-[2px] rounded-full object-cover"
+            style={{ width: "calc(100% - 4px)", height: "calc(100% - 4px)" }}
+          />
+        </div>
+
+        <span className="blur-in mb-6 text-xs uppercase tracking-[0.3em] text-muted">
           {site.eyebrow}
         </span>
 
