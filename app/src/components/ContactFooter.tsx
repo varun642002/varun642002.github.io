@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { site } from "../lib/site";
 
-const MARQUEE = Array.from({ length: 10 }, () => "BUILDING WITH DATA • ").join("");
+const MARQUEE = Array.from({ length: 10 }, () => "LET’S BUILD WITH DATA • ").join("");
 
 export default function ContactFooter() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -89,23 +89,64 @@ export default function ContactFooter() {
           <p className="mb-6 text-xs uppercase tracking-[0.3em] text-muted">
             Get in touch
           </p>
-          <h2 className="mb-10 text-4xl leading-tight tracking-tight text-text-primary md:text-6xl">
-            Have a dataset that needs{" "}
-            <span className="font-display italic">answers?</span>
+          <h2 className="mb-6 text-4xl leading-tight tracking-tight text-text-primary md:text-6xl">
+            Let's build something{" "}
+            <span className="font-display italic">with data.</span>
           </h2>
 
-          <a
-            href={`mailto:${site.email}`}
-            className="group relative inline-block rounded-full text-sm transition-transform duration-300 hover:scale-105"
-          >
-            <span
-              className="accent-gradient absolute rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-              style={{ inset: "-2px" }}
-            />
-            <span className="relative block rounded-full bg-text-primary px-8 py-4 text-bg transition-colors duration-300 group-hover:bg-bg group-hover:text-text-primary">
-              {site.email} ↗
-            </span>
-          </a>
+          <p className="mx-auto mb-10 max-w-lg text-sm text-muted md:text-base">
+            {site.contactLine}
+          </p>
+
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href={`mailto:${site.email}`}
+              className="group relative inline-block rounded-full text-sm transition-transform duration-300 hover:scale-105"
+            >
+              <span
+                className="accent-gradient absolute rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                style={{ inset: "-2px" }}
+              />
+              <span className="relative block rounded-full bg-text-primary px-8 py-4 text-bg transition-colors duration-300 group-hover:bg-bg group-hover:text-text-primary">
+                {site.email} ↗
+              </span>
+            </a>
+
+            {site.socials
+              .filter((social) => social.href.startsWith("http"))
+              .map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative inline-block rounded-full text-sm transition-transform duration-300 hover:scale-105"
+                >
+                  <span
+                    className="accent-gradient absolute rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    style={{ inset: "-2px" }}
+                  />
+                  <span className="relative block rounded-full border-2 border-stroke bg-bg px-8 py-4 text-text-primary transition-colors duration-300 group-hover:border-transparent">
+                    {social.label} ↗
+                  </span>
+                </a>
+              ))}
+
+            <a
+              href={site.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative inline-block rounded-full text-sm transition-transform duration-300 hover:scale-105"
+            >
+              <span
+                className="accent-gradient absolute rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                style={{ inset: "-2px" }}
+              />
+              <span className="relative block rounded-full border-2 border-stroke bg-bg px-8 py-4 text-text-primary transition-colors duration-300 group-hover:border-transparent">
+                Resume ↗
+              </span>
+            </a>
+          </div>
         </div>
 
         <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-6 border-t border-stroke px-6 pt-8 md:flex-row md:justify-between md:px-10 lg:px-16">

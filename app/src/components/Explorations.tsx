@@ -128,7 +128,7 @@ export default function Explorations() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            exit={{ opacity: 0, pointerEvents: "none" }}
             onClick={() => setLightbox(null)}
             className="fixed inset-0 z-[100] flex cursor-zoom-out items-center justify-center bg-bg/90 p-6 backdrop-blur-xl"
           >

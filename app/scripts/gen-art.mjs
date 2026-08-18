@@ -136,6 +136,8 @@ const pieces = [
   ["work-retail", "bars", 1200, 900],
   ["work-ecommerce", "scatter", 1200, 900],
   ["work-hr", "radial", 1200, 800],
+  ["work-thesis", "scatter", 1200, 800],
+  ["work-brake", "radial", 1200, 800],
   ["journal-01", "lines", 600, 600],
   ["journal-02", "blocks", 600, 600],
   ["journal-03", "bars", 600, 600],

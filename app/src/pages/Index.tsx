@@ -5,8 +5,12 @@ import LoadingScreen from "../components/LoadingScreen";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import AboutMe from "../components/AboutMe";
+import Skills from "../components/Skills";
 import SelectedWorks from "../components/SelectedWorks";
-import Journal from "../components/Journal";
+import Experience from "../components/Experience";
+import Achievements from "../components/Achievements";
+import Education from "../components/Education";
+import Certifications from "../components/Certifications";
 import Explorations from "../components/Explorations";
 import Stats from "../components/Stats";
 import ContactFooter from "../components/ContactFooter";
@@ -41,8 +45,12 @@ export default function Index() {
       <main>
         <Hero />
         <AboutMe />
+        <Skills />
         <SelectedWorks />
-        <Journal />
+        <Experience />
+        <Achievements />
+        <Education />
+        <Certifications />
         <Explorations />
         <Stats />
       </main>
