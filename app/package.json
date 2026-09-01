@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "art": "node scripts/gen-art.mjs",
+    "art": "node scripts/gen-art.mjs && node scripts/gen-corners.mjs",
     "publish": "npm run build && node scripts/publish.mjs"
   },
   "dependencies": {

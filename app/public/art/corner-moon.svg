@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300" fill="none">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#89AACC"/><stop offset="1" stop-color="#4E85BF"/>
+    </linearGradient>
+    <linearGradient id="d1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4E85BF"/><stop offset="1" stop-color="#2b4d70"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#89AACC" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#89AACC" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="150" cy="150" r="150" fill="url(#glow1)"/>
+  <ellipse cx="150" cy="150" rx="128" ry="46" transform="rotate(-24 150 150)"
+    fill="none" stroke="#D7E2EA" stroke-opacity="0.45" stroke-width="2.5"/>
+  <circle cx="150" cy="150" r="74" fill="url(#g1)"/>
+  <path d="M150 76a74 74 0 0 0 0 148 74 74 0 0 1 0-148z" fill="#0C0C0C" opacity="0.34"/>
+  <circle cx="126" cy="126" r="13" fill="#0C0C0C" opacity="0.22"/>
+  <circle cx="171" cy="167" r="8" fill="#0C0C0C" opacity="0.18"/>
+  <circle cx="139" cy="180" r="5" fill="#0C0C0C" opacity="0.15"/>
+  <ellipse cx="150" cy="150" rx="128" ry="46" transform="rotate(-24 150 150)"
+    fill="none" stroke="#D7E2EA" stroke-opacity="0.75" stroke-width="2.5"
+    stroke-dasharray="150 400" stroke-dashoffset="60"/>
+  <circle cx="34" cy="176" r="5" fill="#89AACC"/>
+  <circle cx="264" cy="120" r="4" fill="#89AACC" opacity="0.7"/>
+</svg>

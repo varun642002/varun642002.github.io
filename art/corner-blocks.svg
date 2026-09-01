@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300" fill="none">
+  <defs>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#89AACC"/><stop offset="1" stop-color="#4E85BF"/>
+    </linearGradient>
+    <linearGradient id="d3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4E85BF"/><stop offset="1" stop-color="#2b4d70"/>
+    </linearGradient>
+    <radialGradient id="glow3" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#89AACC" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#89AACC" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="150" cy="150" r="150" fill="url(#glow3)"/>
+  <polygon points="150,160 196.764,187 150,214 103.23599999999999,187" fill="url(#g3)"/>
+  <polygon points="103.23599999999999,187 150,214 150,268 103.23599999999999,241" fill="url(#d3)" opacity="0.85"/>
+  <polygon points="196.764,187 150,214 150,268 196.764,241" fill="#4E85BF" opacity="0.55"/>
+  <polygon points="150,160 196.764,187 150,214 103.23599999999999,187" fill="none" stroke="#D7E2EA" stroke-opacity="0.35" stroke-width="1.5"/><ellipse cx="126.618" cy="173.5" rx="9.180000000000001" ry="5.4" fill="#D7E2EA" fill-opacity="0.4"/><ellipse cx="173.382" cy="200.5" rx="9.180000000000001" ry="5.4" fill="#D7E2EA" fill-opacity="0.4"/>
+  <polygon points="150,98 196.764,125 150,152 103.23599999999999,125" fill="url(#g3)"/>
+  <polygon points="103.23599999999999,125 150,152 150,206 103.23599999999999,179" fill="url(#d3)" opacity="0.85"/>
+  <polygon points="196.764,125 150,152 150,206 196.764,179" fill="#4E85BF" opacity="0.55"/>
+  <polygon points="150,98 196.764,125 150,152 103.23599999999999,125" fill="none" stroke="#D7E2EA" stroke-opacity="0.35" stroke-width="1.5"/><ellipse cx="126.618" cy="111.5" rx="9.180000000000001" ry="5.4" fill="#D7E2EA" fill-opacity="0.4"/><ellipse cx="173.382" cy="138.5" rx="9.180000000000001" ry="5.4" fill="#D7E2EA" fill-opacity="0.4"/>
+  <polygon points="150,36 196.764,63 150,90 103.23599999999999,63" fill="url(#g3)"/>
+  <polygon points="103.23599999999999,63 150,90 150,144 103.23599999999999,117" fill="url(#d3)" opacity="0.85"/>
+  <polygon points="196.764,63 150,90 150,144 196.764,117" fill="#4E85BF" opacity="0.55"/>
+  <polygon points="150,36 196.764,63 150,90 103.23599999999999,63" fill="none" stroke="#D7E2EA" stroke-opacity="0.35" stroke-width="1.5"/><ellipse cx="126.618" cy="49.5" rx="9.180000000000001" ry="5.4" fill="#D7E2EA" fill-opacity="0.4"/><ellipse cx="173.382" cy="76.5" rx="9.180000000000001" ry="5.4" fill="#D7E2EA" fill-opacity="0.4"/>
+</svg>

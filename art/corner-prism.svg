@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300" fill="none">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#89AACC"/><stop offset="1" stop-color="#4E85BF"/>
+    </linearGradient>
+    <linearGradient id="d2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4E85BF"/><stop offset="1" stop-color="#2b4d70"/>
+    </linearGradient>
+    <radialGradient id="glow2" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#89AACC" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#89AACC" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="150" cy="150" r="150" fill="url(#glow2)"/>
+  <g transform="rotate(-8 150 150)"><polygon points="150,70 217.548,109 150,148 82.452,109" fill="url(#g2)"/>
+  <polygon points="82.452,109 150,148 150,226 82.452,187" fill="url(#d2)" opacity="0.85"/>
+  <polygon points="217.548,109 150,148 150,226 217.548,187" fill="#4E85BF" opacity="0.55"/>
+  <polygon points="150,70 217.548,109 150,148 82.452,109" fill="none" stroke="#D7E2EA" stroke-opacity="0.35" stroke-width="1.5"/></g>
+  <circle cx="60" cy="66" r="6" fill="#89AACC" opacity="0.8"/>
+  <circle cx="246" cy="238" r="4" fill="#89AACC" opacity="0.6"/>
+</svg>
