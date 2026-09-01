@@ -36,9 +36,34 @@ copyFileSync(resolve(dist, "index.html"), resolve(root, "404.html"));
 
 // Give each client-side route a real entry point too, so it answers 200
 // instead of falling through the 404 handler.
-for (const route of ["jack"]) {
+for (const route of ["studio"]) {
   mkdirSync(resolve(root, route), { recursive: true });
   copyFileSync(resolve(dist, "index.html"), resolve(root, route, "index.html"));
+}
+
+// Routes that have been renamed keep a redirect stub, so links already shared
+// under the old path still land somewhere useful instead of a 404.
+const REDIRECTS = { jack: "/studio/" };
+for (const [from, to] of Object.entries(REDIRECTS)) {
+  mkdirSync(resolve(root, from), { recursive: true });
+  writeFileSync(
+    resolve(root, from, "index.html"),
+    `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <link rel="canonical" href="${to}" />
+    <meta http-equiv="refresh" content="0; url=${to}" />
+    <meta name="robots" content="noindex" />
+  </head>
+  <body>
+    <p>This page moved to <a href="${to}">${to}</a>.</p>
+    <script>window.location.replace("${to}");</script>
+  </body>
+</html>
+`,
+  );
 }
 
 // Stop Pages from running the output through Jekyll.

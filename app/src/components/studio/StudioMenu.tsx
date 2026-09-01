@@ -15,7 +15,7 @@ const SECTIONS = [
   { label: "Contact", id: "contact" },
 ];
 
-export default function JackMenu() {
+export default function StudioMenu() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {

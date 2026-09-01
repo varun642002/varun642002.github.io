@@ -1,6 +1,6 @@
 import type React from "react";
 import FadeIn from "./FadeIn";
-import AnimatedText from "./jack/AnimatedText";
+import AnimatedText from "./studio/AnimatedText";
 import { about } from "../lib/site";
 
 const CORNERS = [
