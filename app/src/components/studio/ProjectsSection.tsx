@@ -19,9 +19,18 @@ const PROJECTS = works.map((work, i) => ({
   no: work.no,
   name: work.title,
   category: work.kind,
+  subtitle: work.subtitle,
+  body: work.body,
+  tags: work.tags,
   href: work.href || "/#work",
   linkLabel: work.href ? work.linkLabel : "View Details",
-  images: [work.image, FILLER[i % FILLER.length], FILLER[(i + 3) % FILLER.length]],
+  // Real screenshots when the project has them; otherwise its own artwork
+  // padded with studies, so every card fills the same three slots.
+  images: work.shots ?? [
+    work.image,
+    FILLER[i % FILLER.length],
+    FILLER[(i + 3) % FILLER.length],
+  ],
 }));
 
 const RADIUS = "rounded-[40px] sm:rounded-[50px] md:rounded-[60px]";
@@ -43,7 +52,7 @@ function Card({
   const scale = useTransform(progress, [index / total, 1], [1, targetScale]);
 
   return (
-    <div className="sticky top-24 flex h-[85vh] items-start justify-center md:top-32">
+    <div className="sticky top-24 flex min-h-[85vh] items-start justify-center pb-8 md:top-32">
       <motion.article
         style={{ scale, top: `${index * 28}px` }}
         className={`relative w-full border-2 border-[#D7E2EA] p-4 sm:p-6 md:p-8 ${RADIUS}`}
@@ -74,21 +83,41 @@ function Card({
           <LiveProjectButton href={project.href} label={project.linkLabel} />
         </div>
 
-        <div className="mt-4 flex gap-3 sm:mt-6 md:gap-4">
+        <div className="mt-5 max-w-3xl md:mt-7">
+          <p
+            className="font-light leading-relaxed text-[#D7E2EA]"
+            style={{ fontSize: "clamp(0.85rem, 1.5vw, 1.1rem)", opacity: 0.72 }}
+          >
+            {project.body}
+          </p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {project.tags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full px-3 py-1 text-[11px] uppercase tracking-widest text-[#D7E2EA] sm:text-xs"
+                style={{ border: "1px solid rgba(215, 226, 234, 0.28)", opacity: 0.75 }}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-5 flex gap-3 sm:mt-6 md:gap-4">
           <div className="flex w-[40%] flex-col gap-3 md:gap-4">
             <img
               src={project.images[0]}
               alt=""
               loading="lazy"
-              className={`w-full object-cover ${RADIUS}`}
-              style={{ height: "clamp(130px, 16vw, 230px)" }}
+              className={`w-full object-cover object-top ${RADIUS}`}
+              style={{ height: "clamp(110px, 13vw, 190px)" }}
             />
             <img
               src={project.images[1]}
               alt=""
               loading="lazy"
-              className={`w-full object-cover ${RADIUS}`}
-              style={{ height: "clamp(160px, 22vw, 340px)" }}
+              className={`w-full object-cover object-top ${RADIUS}`}
+              style={{ height: "clamp(140px, 18vw, 280px)" }}
             />
           </div>
 
@@ -97,8 +126,8 @@ function Card({
               src={project.images[2]}
               alt=""
               loading="lazy"
-              className={`h-full w-full object-cover ${RADIUS}`}
-              style={{ minHeight: "clamp(305px, 40vw, 590px)" }}
+              className={`w-full object-cover object-top ${RADIUS}`}
+              style={{ height: "clamp(265px, 32vw, 490px)" }}
             />
           </div>
         </div>

@@ -38,6 +38,17 @@ export default function AchievementsSection() {
             >
               {item.body}
             </p>
+            <div className="mt-auto flex flex-wrap gap-2 pt-2">
+              {item.metrics.map((metric) => (
+                <span
+                  key={metric}
+                  className="rounded-full px-3 py-1 text-[11px] uppercase tracking-widest text-[#0C0C0C] sm:text-xs"
+                  style={{ border: "1px solid rgba(12, 12, 12, 0.25)", opacity: 0.7 }}
+                >
+                  {metric}
+                </span>
+              ))}
+            </div>
           </FadeIn>
         ))}
       </div>

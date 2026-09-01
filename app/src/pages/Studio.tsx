@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import HeroSection from "../components/studio/HeroSection";
 import AboutSection from "../components/studio/AboutSection";
-import ServicesSection from "../components/studio/ServicesSection";
 import ProjectsSection from "../components/studio/ProjectsSection";
 import SkillsSection from "../components/studio/SkillsSection";
 import ExperienceSection from "../components/studio/ExperienceSection";
@@ -29,7 +28,6 @@ export default function Studio() {
       <HeroSection />
       <AboutSection />
       <SkillsSection />
-      <ServicesSection />
       <ProjectsSection />
       <ExperienceSection />
       <AchievementsSection />

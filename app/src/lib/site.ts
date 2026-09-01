@@ -57,6 +57,21 @@ export const skills = [
     title: "Business Analytics",
     body: "KPI development, requirements analysis, dashboard design, business reporting, stakeholder communication, and insight generation.",
   },
+  {
+    no: "07",
+    title: "Generative AI & LLM Applications",
+    body: "Generative AI with Python (IBM certified), AI-powered analytics application development, and using ChatGPT and Gemini as working tools for research, analysis and drafting.",
+  },
+  {
+    no: "08",
+    title: "Machine Learning for Business",
+    body: "Machine Learning for Business (Jain certified), predictive analytics, and framing business questions as problems a model can actually answer.",
+  },
+  {
+    no: "09",
+    title: "Application Development",
+    body: "Shipping the analysis as a product: FastAPI and PostgreSQL services, Next.js and React front ends, React Native and Capacitor builds, and Firebase.",
+  },
 ];
 
 export type Work = {
@@ -72,6 +87,9 @@ export type Work = {
   span: string;
   aspect: string;
   stats?: { value: string; label: string }[];
+  // Real product screenshots, where they exist. Projects without a
+  // shippable UI fall back to the generated artwork in `image`.
+  shots?: string[];
 };
 
 export const works: Work[] = [
@@ -191,7 +209,12 @@ export const works: Work[] = [
     subtitle: "Family health record platform",
     body: "One place for a household's health: patients and dependents, medical records, medicines, vaccinations, appointments, insurance and expenses, with OCR document processing and an AI health assistant. Built on Firebase so record ownership is enforced by document path in security rules rather than by application code.",
     tags: ["React Native", "Expo", "Firebase", "Firestore", "OCR"],
-    image: "/art/work-auravault.svg",
+    image: "/shots/auravault-home.webp",
+    shots: [
+      "/shots/auravault-home.webp",
+      "/shots/auravault-records.webp",
+      "/shots/auravault-explore.webp",
+    ],
     href: "",
     linkLabel: "",
     span: "md:col-span-5",
@@ -204,7 +227,12 @@ export const works: Work[] = [
     subtitle: "Personal finance command center",
     body: "An expense tracker where every figure on screen is derived from one live ledger and every action writes back to it — budgets, goals, net worth, cash-flow projection and payday allocation. Bank statements import from CSV, Excel or PDF through a column mapper and categorisation rules, with an audit trail and undo per import.",
     tags: ["React", "TypeScript", "Tailwind", "Capacitor", "Data Import"],
-    image: "/art/work-moneyvault.svg",
+    image: "/shots/moneyvault-dashboard.webp",
+    shots: [
+      "/shots/moneyvault-dashboard.webp",
+      "/shots/moneyvault-cashflow.webp",
+      "/shots/moneyvault-budgets.webp",
+    ],
     href: "",
     linkLabel: "",
     span: "md:col-span-12",
@@ -255,32 +283,38 @@ export const achievements = [
   {
     tag: "2024",
     title: "SAE Student of the Year",
-    body: "Recognised for technical contribution, leadership, engineering involvement and active participation in SAE initiatives.",
+    body: "The chapter's annual award, given for sustained technical contribution, leadership and active participation across SAE engineering initiatives rather than for a single event or result. It followed three consecutive years of competition work, from the electric vehicle project in 2022 through two Formula Student campaigns.",
+    metrics: ["Annual chapter award", "3 years of competition work"],
   },
   {
     tag: "2023",
     title: "Team Manager — SAE SUPRA",
-    body: "Led a 30-member Formula Student team to 2nd place among approximately 80 teams nationwide.",
+    body: "Ran a 30-member Formula Student team through a national campaign, finishing 2nd among roughly 80 teams. The role was project coordination as much as engineering: holding schedules and responsibilities across subsystems, and carrying technical decisions to a build that had to pass scrutineering and then actually race.",
+    metrics: ["30-member team", "2nd of ~80 teams", "National"],
   },
   {
     tag: "2023",
     title: "Vice Captain — FMAE Formula Student",
-    body: "Contributed to a national 3rd-place finish, including 1st place in the design and acceleration events.",
+    body: "Second-in-command on a campaign that placed 3rd nationally overall and took 1st in two individual events — design and acceleration. Winning the design event is a judged result: the team defends its engineering choices to a panel, so it rewards the reasoning behind the car rather than its lap time.",
+    metrics: ["3rd overall", "1st — design", "1st — acceleration"],
   },
   {
     tag: "2022",
     title: "Group Captain — Electric Vehicle Project",
-    body: "Led an electric vehicle project team to 1st place overall among 25 competing teams.",
+    body: "Led an electric vehicle project team to 1st place overall against 25 competing teams. This was the first of the three competition years and the entry point into leading a build team rather than working inside one.",
+    metrics: ["1st overall", "25 teams"],
   },
   {
     tag: "Leadership",
-    title: "30-Member Team Leadership",
-    body: "Managed multidisciplinary engineering activities, coordinated responsibilities and supported technical decision-making toward national competition objectives.",
+    title: "Three Years of Team Leadership",
+    body: "Group Captain in 2022, Vice Captain and Team Manager in 2023, Student of the Year in 2024 — three consecutive years of leading multidisciplinary engineering teams toward national competition deadlines. The recurring work was coordinating people with different specialisms around a fixed date and a car that had to run.",
+    metrics: ["2022 → 2024", "Multidisciplinary teams"],
   },
   {
     tag: "Transition",
     title: "Engineering to Data & Analytics",
-    body: "Moved from automobile engineering into business analytics, data analysis, cloud data engineering and AI-powered application development.",
+    body: "B.E. in Automobile Engineering (2021–2024) followed directly by an MBA in Business Analytics (2024–2026), moving from mechanical design into data analysis, cloud data engineering and AI-powered application development. The engineering habit that carried over is the useful one: define the measurement before trusting the number.",
+    metrics: ["B.E. Automobile", "MBA Business Analytics"],
   },
 ];
 

@@ -34,6 +34,16 @@ export default function Achievements() {
                 {item.title}
               </h3>
               <p className="text-sm leading-relaxed text-muted">{item.body}</p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {item.metrics.map((metric) => (
+                  <span
+                    key={metric}
+                    className="rounded-full border border-stroke px-3 py-1 text-[11px] uppercase tracking-[0.16em] text-muted"
+                  >
+                    {metric}
+                  </span>
+                ))}
+              </div>
             </motion.div>
           ))}
         </div>

@@ -1,46 +1,58 @@
 import FadeIn from "../FadeIn";
 import { skills } from "../../lib/site";
 
+// The white block that used to be "Services". It reads as a capability list
+// either way, and the numbered layout carries more weight than the dark grid
+// this section replaced.
 export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="px-5 py-20 sm:px-8 sm:py-24 md:px-10 md:py-32"
-      style={{ background: "#0C0C0C" }}
+      className="relative z-0 rounded-t-[40px] px-5 py-20 sm:rounded-t-[50px] sm:px-8 sm:py-24 md:rounded-t-[60px] md:px-10 md:py-32"
+      style={{ background: "#FFFFFF" }}
     >
       <h2
-        className="hero-heading mb-16 text-center font-black uppercase leading-none tracking-tight sm:mb-20 md:mb-28"
+        className="mb-16 text-center font-black uppercase leading-none tracking-tight text-[#0C0C0C] sm:mb-20 md:mb-28"
         style={{ fontSize: "clamp(3rem, 12vw, 160px)" }}
       >
         Skills
       </h2>
 
-      <div className="mx-auto grid max-w-5xl grid-cols-1 gap-px sm:grid-cols-2">
+      <div className="mx-auto max-w-5xl">
         {skills.map((skill, i) => (
           <FadeIn
             key={skill.no}
-            delay={(i % 2) * 0.1}
-            className="flex flex-col gap-4 p-6 sm:p-8 md:p-10"
-            style={{ outline: "1px solid rgba(215, 226, 234, 0.15)" }}
+            delay={Math.min(i, 4) * 0.08}
+            className="flex items-start gap-5 py-8 sm:gap-8 sm:py-10 md:gap-12 md:py-12"
+            style={{
+              borderTop: i === 0 ? "1px solid rgba(12, 12, 12, 0.15)" : undefined,
+              borderBottom: "1px solid rgba(12, 12, 12, 0.15)",
+            }}
           >
             <span
-              className="font-black leading-none text-[#D7E2EA]/25"
-              style={{ fontSize: "clamp(2.5rem, 6vw, 80px)" }}
+              className="shrink-0 font-black leading-none text-[#0C0C0C]"
+              style={{ fontSize: "clamp(3rem, 10vw, 140px)" }}
             >
               {skill.no}
             </span>
-            <h3
-              className="font-medium uppercase leading-tight text-[#D7E2EA]"
-              style={{ fontSize: "clamp(1rem, 2.2vw, 1.9rem)" }}
-            >
-              {skill.title}
-            </h3>
-            <p
-              className="font-light leading-relaxed text-[#D7E2EA]"
-              style={{ fontSize: "clamp(0.85rem, 1.6vw, 1.15rem)", opacity: 0.6 }}
-            >
-              {skill.body}
-            </p>
+
+            <div className="flex flex-col gap-3 pt-1 md:gap-4">
+              <h3
+                className="font-medium uppercase leading-tight text-[#0C0C0C]"
+                style={{ fontSize: "clamp(1rem, 2.2vw, 2.1rem)" }}
+              >
+                {skill.title}
+              </h3>
+              <p
+                className="max-w-2xl font-light leading-relaxed text-[#0C0C0C]"
+                style={{
+                  fontSize: "clamp(0.85rem, 1.6vw, 1.25rem)",
+                  opacity: 0.6,
+                }}
+              >
+                {skill.body}
+              </p>
+            </div>
           </FadeIn>
         ))}
       </div>

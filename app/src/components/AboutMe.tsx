@@ -39,7 +39,7 @@ export default function AboutMe() {
     <section
       id="about"
       className="relative flex min-h-screen flex-col items-center justify-center px-5 py-20 font-kanit sm:px-8 md:px-10"
-      style={{ background: "#0C0C0C" }}
+      style={{ background: "#0C0C0C", overflowX: "clip" }}
     >
       {CORNERS.map((corner) => (
         <FadeIn
