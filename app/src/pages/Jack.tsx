@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import HeroSection from "../components/jack/HeroSection";
-import MarqueeSection from "../components/jack/MarqueeSection";
 import AboutSection from "../components/jack/AboutSection";
 import ServicesSection from "../components/jack/ServicesSection";
 import ProjectsSection from "../components/jack/ProjectsSection";
@@ -28,7 +27,6 @@ export default function Jack() {
     >
       <JackMenu />
       <HeroSection />
-      <MarqueeSection />
       <AboutSection />
       <SkillsSection />
       <ServicesSection />
