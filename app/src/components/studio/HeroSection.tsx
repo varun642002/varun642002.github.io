@@ -39,7 +39,7 @@ export default function HeroSection() {
           as="h1"
           delay={0.15}
           y={40}
-          className="hero-heading mt-6 w-full whitespace-nowrap text-center text-[14vw] font-black uppercase leading-none tracking-tight sm:mt-4 sm:text-[15vw] md:-mt-5 md:text-[16vw] lg:text-[17.5vw]"
+          className="hero-heading mt-6 w-full whitespace-nowrap text-center text-[13.5vw] font-black uppercase leading-none tracking-tight sm:mt-4 sm:text-[14vw] md:-mt-5 md:text-[14.5vw] lg:text-[15.5vw]"
         >
           Hi, i&apos;m varun
         </FadeIn>
@@ -56,7 +56,7 @@ export default function HeroSection() {
           a data analyst driven by turning messy data into decisions people act on
         </FadeIn>
 
-        <FadeIn delay={0.5} y={20} className="relative z-20">
+        <FadeIn delay={0.5} y={20} className="relative z-20 mb-12 sm:mb-16">
           <ContactButton href={`mailto:${site.email}`} />
         </FadeIn>
       </div>
