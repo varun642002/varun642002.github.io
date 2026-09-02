@@ -11,7 +11,6 @@ import Experience from "../components/Experience";
 import Achievements from "../components/Achievements";
 import Education from "../components/Education";
 import Certifications from "../components/Certifications";
-import Explorations from "../components/Explorations";
 import Stats from "../components/Stats";
 import ContactFooter from "../components/ContactFooter";
 
@@ -51,7 +50,6 @@ export default function Index() {
         <Achievements />
         <Education />
         <Certifications />
-        <Explorations />
         <Stats />
       </main>
       <ContactFooter />

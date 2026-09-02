@@ -436,15 +436,6 @@ export const certifications = [
   },
 ];
 
-export const explorations = [
-  "/art/explore-01.svg",
-  "/art/explore-02.svg",
-  "/art/explore-03.svg",
-  "/art/explore-04.svg",
-  "/art/explore-05.svg",
-  "/art/explore-06.svg",
-];
-
 export const stats = [
   { value: "100K+", label: "Records Analysed" },
   { value: "30", label: "Member Team Led" },
