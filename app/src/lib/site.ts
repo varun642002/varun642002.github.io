@@ -23,7 +23,7 @@ export const site = {
 
 export const about = {
   paragraph:
-    "I started out in automobile engineering — brake systems, test rigs, Formula Student deadlines — and moved into business analytics because the questions I cared about were always in the data. Today I build SQL models, Power BI dashboards and Azure pipelines that turn messy operational data into decisions people actually make. Let's build something with yours!",
+    "I started out in automobile engineering — brake systems, test rigs, Formula Student deadlines — and moved into business analytics because the questions I cared about were always in the data. Day to day that means SQL models, Power BI and Looker dashboards, and Azure pipelines that turn messy operational data into decisions people actually make. The rest of the time I ship the analysis as software: IGNYT, an offline-first fitness app on Google Play; IGNYT Coach, the platform trainers run their clients from; AuraVault, a family health record vault; and MoneyVault, an expense tracker built on a single live ledger. Let's build something with yours!",
 };
 
 export const skills = [
@@ -235,8 +235,26 @@ export const works: Work[] = [
     ],
     href: "",
     linkLabel: "",
-    span: "md:col-span-12",
-    aspect: "aspect-[4/3] md:aspect-[21/9]",
+    span: "md:col-span-7",
+    aspect: "aspect-[4/3] md:aspect-[16/10]",
+  },
+  {
+    no: "10",
+    title: "IGNYT",
+    kind: "Android App • Capacitor + Health Connect",
+    subtitle: "Offline-first fitness and nutrition tracker",
+    body: "A fitness app that works with no signal and no account: workout planning, training schedules, a 1000+ exercise library, HYROX plans, nutrition and a food database, hydration, fasting and body-weight tracking, with weekly analytics over the top. Ships to Google Play as com.varun.ignyt through Capacitor, reads and writes Google Health Connect, and has an iOS build with a Swift HealthKit plugin behind Codemagic CI.",
+    tags: ["Capacitor", "Android", "Health Connect", "Offline-first", "Next.js"],
+    image: "/shots/ignyt-home.webp",
+    shots: [
+      "/shots/ignyt-home.webp",
+      "/shots/ignyt-features.webp",
+      "/shots/ignyt-download.webp",
+    ],
+    href: "https://igny-tfit-in.vercel.app",
+    linkLabel: "View live site",
+    span: "md:col-span-5",
+    aspect: "aspect-[4/3] md:aspect-[16/10]",
   },
 ];
 
