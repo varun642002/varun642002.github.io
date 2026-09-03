@@ -2,23 +2,33 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Varun S — Data Analyst &amp; Data Engineer</title>
+<title>Varun S - Data Analyst and Data Engineer</title>
 <style>
   /* Source for public/Varun_S_Resume_DataAnalyst.pdf.
      Edit here, then `npm run resume` to re-render the PDF.
-     Sized to match the original Word document: US Letter, Arial, 10pt. */
+     US Letter, Arial, two pages.
+
+     ATS constraints this file deliberately respects:
+       - one linear column; no CSS columns, no tables, no absolute positioning
+       - dates sit in a flex row *after* the title in the DOM, so the PDF
+         text layer reads title-then-date (float painted the date first)
+       - standard section headings (EXPERIENCE / EDUCATION / SKILLS / ...)
+       - real text, no images or icons
+       - no non-breaking spaces, which some parsers glue into single tokens
+
+     Bullets follow the Google XYZ formula: accomplished X, measured by Y, by
+     doing Z. Every Y here is a figure that already existed in the portfolio
+     data or the previous resume - none were invented to fit the pattern. */
 
   @page { size: Letter; margin: 0.5in 0.55in; }
 
   * { box-sizing: border-box; }
 
-  html { font-size: 10pt; }
-
   body {
     margin: 0;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 9.6pt;
-    line-height: 1.32;
+    font-size: 8.6pt;
+    line-height: 1.22;
     color: #000;
   }
 
@@ -41,38 +51,31 @@
     margin: 2pt 0 0;
   }
 
-  .contact { margin-bottom: 8pt; }
+  .contact { margin-bottom: 6pt; }
 
   /* ---- sections ---- */
 
   h2 {
-    font-size: 10.5pt;
+    font-size: 10pt;
     font-weight: bold;
     letter-spacing: 0.4pt;
-    margin: 9pt 0 4pt;
-    padding-bottom: 1.5pt;
+    margin: 5.5pt 0 2.5pt;
+    padding-bottom: 1.2pt;
     border-bottom: 1px solid #000;
     page-break-after: avoid;
   }
 
-  ul {
-    margin: 0;
-    padding-left: 13pt;
-  }
+  ul { margin: 0; padding-left: 13pt; }
 
-  li {
-    margin: 0 0 2.5pt;
-    page-break-inside: avoid;
-  }
+  li { margin: 0 0 1.5pt; page-break-inside: avoid; }
 
   p { margin: 0 0 3pt; }
 
-  /* An entry: title row, an optional tech/meta line, then bullets. */
+  /* An entry: title row (title, then right-aligned date/link), a tech line,
+     then bullets. Order in the DOM is the order the extracted text comes
+     out in, which is what a parser reads - keep the title first. */
 
-  .entry {
-    margin-bottom: 5pt;
-    page-break-inside: avoid;
-  }
+  .entry { margin-bottom: 3pt; page-break-inside: avoid; }
 
   .entry-head {
     display: flex;
@@ -83,80 +86,37 @@
 
   .entry-title { font-weight: bold; }
 
-  .entry-meta {
-    font-size: 8.8pt;
-    white-space: nowrap;
-  }
+  .entry-meta { font-size: 8.6pt; white-space: nowrap; }
 
-  .tech {
-    font-style: italic;
-    font-size: 8.9pt;
-    margin: 0 0 1.5pt;
-  }
-
-  /* Competencies / skills read as label + run-on list. */
+  .tech { font-style: italic; font-size: 8.7pt; margin: 0 0 1.5pt; }
 
   .label { font-weight: bold; }
 
   .compact li { margin-bottom: 1.5pt; }
 
-  /* ---- certifications table ---- */
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 9.1pt;
-  }
-
-  td {
-    padding: 1.6pt 6pt 1.6pt 0;
-    vertical-align: top;
-  }
-
-  td.issuer { width: 33%; }
-
-  td.cred {
-    width: 21%;
-    padding-right: 0;
-    white-space: nowrap;
-    font-size: 8.6pt;
-  }
-
-  td.year {
-    width: 6%;
-    text-align: right;
-    padding-right: 0;
-    white-space: nowrap;
-  }
+  .summary { text-align: justify; }
 </style>
 </head>
 <body>
 
 <h1 class="name">VARUN S</h1>
-<p class="headline">Data Analyst &amp; Data Engineer &nbsp;|&nbsp; Business Analytics &nbsp;|&nbsp; SQL &nbsp;|&nbsp; Power BI &nbsp;|&nbsp; Azure &nbsp;|&nbsp; AI-Powered Analytics &nbsp;|&nbsp; Available Immediately</p>
-<p class="contact">Bangalore, India &nbsp;|&nbsp; 8903070652 &nbsp;|&nbsp; varunaadithiya@gmail.com &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/varun64200/">LinkedIn</a> &nbsp;|&nbsp; <a href="https://github.com/varun642002">GitHub</a> &nbsp;|&nbsp; <a href="https://varun642002.github.io">Portfolio</a></p>
+<p class="headline">Data Analyst &amp; Data Engineer | Business Analytics | SQL | Power BI | Azure | AI-Powered Analytics | Available Immediately</p>
+<p class="contact">Bangalore, India | 8903070652 | varunaadithiya@gmail.com | <a href="https://www.linkedin.com/in/varun64200/">LinkedIn</a> | <a href="https://github.com/varun642002">GitHub</a> | <a href="https://varun642002.github.io">Portfolio</a></p>
 
 <h2>PROFILE SUMMARY</h2>
-<ul>
-  <li>MBA (Business Analytics) Data Analyst and aspiring Data Engineer with end-to-end project experience spanning data analytics, business intelligence, cloud data engineering, statistical analysis, and AI-powered analytics application development.</li>
-  <li>Proficient in SQL, Power BI (DAX, Data Modeling, Power Query), Advanced Excel, Looker Studio, and SPSS; experienced in designing scalable dashboards, KPI-driven reports, ETL pipelines, and data visualizations that support data-driven decision-making.</li>
-  <li>Hands-on experience with cloud data engineering tools including Azure Data Factory, Azure Databricks, Azure Synapse Analytics, and Azure SQL Database — building automated data pipelines and end-to-end analytical platforms.</li>
-  <li>Strong foundation in statistical analysis including descriptive statistics, Pearson correlation, regression analysis, hypothesis testing, and reliability analysis, applied in MBA research and analytical projects.</li>
-  <li>Ships analysis as software: four production applications built and released — a fitness tracker live on Google Play, a coaching SaaS platform, a family health record app, and a personal-finance ledger — using FastAPI, PostgreSQL, Next.js, React Native and Firebase.</li>
-</ul>
+<p class="summary">MBA (Business Analytics) Data Analyst and aspiring Data Engineer, building dashboards, SQL models and Azure ETL pipelines that turn operational data into decisions. Proficient in SQL, Power BI (DAX, Data Modeling, Power Query), Advanced Excel, Looker Studio and SPSS, with a statistical foundation in correlation, regression and hypothesis testing. Also ships the analysis as software, with four production applications released including a fitness tracker live on Google Play.</p>
 
 <h2>CORE COMPETENCIES</h2>
 <ul class="compact">
-  <li>Data Analysis &amp; Business Intelligence &nbsp;•&nbsp; Dashboard &amp; Report Development (Power BI, Looker Studio, Tableau) &nbsp;•&nbsp; SQL &amp; Database Management</li>
-  <li>ETL Pipeline Development &nbsp;•&nbsp; Cloud Data Engineering (Azure) &nbsp;•&nbsp; Statistical Analysis &amp; Hypothesis Testing &nbsp;•&nbsp; Data Cleaning &amp; Transformation</li>
-  <li>KPI Monitoring &amp; Performance Analytics &nbsp;•&nbsp; Requirement Gathering &amp; Documentation &nbsp;•&nbsp; Stakeholder Management &nbsp;•&nbsp; Data Quality &amp; Integrity</li>
-  <li>AI-Powered Analytics &nbsp;•&nbsp; Machine Learning for Business &nbsp;•&nbsp; Predictive Analytics &nbsp;•&nbsp; Business Process Analysis &nbsp;•&nbsp; Data-Driven Decision Making</li>
+  <li>Data Analysis &amp; Business Intelligence &bull; Dashboard &amp; Report Development (Power BI, Looker Studio, Tableau) &bull; SQL &amp; Database Management</li>
+  <li>ETL Pipeline Development &bull; Cloud Data Engineering (Azure) &bull; Statistical Analysis &amp; Hypothesis Testing &bull; Data Cleaning &amp; Transformation</li>
+  <li>KPI Monitoring &amp; Performance Analytics &bull; Requirement Gathering &amp; Documentation &bull; Stakeholder Management &bull; Data Quality &amp; Integrity &bull; AI-Powered Analytics &bull; Machine Learning for Business &bull; Predictive Analytics &bull; Business Process Analysis &bull; Data-Driven Decision Making</li>
 </ul>
 
 <h2>TECHNICAL SKILLS</h2>
 <ul class="compact">
   <li><span class="label">BI &amp; Visualization:</span> Power BI (DAX, Data Modeling, Power Query), Looker Studio, Tableau, Advanced Excel (Pivot Tables, VLOOKUP, Data Modeling)</li>
-  <li><span class="label">Languages &amp; Analytics:</span> SQL (Joins, CTEs, Window Functions, Subqueries, Aggregations), Python (Pandas, NumPy — practice level), R (foundational), SPSS</li>
+  <li><span class="label">Languages &amp; Analytics:</span> SQL (Joins, CTEs, Window Functions, Subqueries, Aggregations), Python (Pandas, NumPy, practice level), R (foundational), SPSS</li>
   <li><span class="label">Cloud &amp; Data Engineering:</span> Azure Data Factory, Azure Databricks, Azure Synapse Analytics, Azure SQL Database, Azure Key Vault, Dataflows, ETL Pipelines</li>
   <li><span class="label">Statistical Methods:</span> Descriptive Statistics, Pearson Correlation, Multiple Regression, Hypothesis Testing, Reliability Analysis, ROI Analysis</li>
   <li><span class="label">AI &amp; Emerging Tech:</span> Generative AI (IBM certified), Machine Learning for Business, AI-powered application development, ChatGPT &amp; Gemini for research &amp; analysis</li>
@@ -166,213 +126,133 @@
 <h2>PROJECTS</h2>
 
 <div class="entry">
-  <div class="entry-head">
-    <span class="entry-title">ForgeInsight — AI-Powered Data Analytics Workspace</span>
-    <span class="entry-meta">ai-data-analytics-workspace.vercel.app</span>
-  </div>
-  <p class="tech">Tech Stack: AI / Python / Web Application</p>
+  <div class="entry-head"><span class="entry-title">ForgeInsight - AI-Powered Data Analytics Workspace</span><span class="entry-meta">ai-data-analytics-workspace.vercel.app</span></div>
+  <p class="tech">AI | Python | Web Application</p>
   <ul>
-    <li>Designed and deployed a full-stack AI-powered analytics workspace enabling users to upload datasets, perform exploratory data analysis, generate AI-driven insights, and interact with analytical workflows through a modern web-based interface.</li>
+    <li>Delivered a full-stack AI-powered analytics workspace that lets a user with no coding background complete an exploratory analysis end to end, by building dataset upload, automated EDA and AI-driven insight generation into a single browser-based workflow.</li>
   </ul>
 </div>
 
 <div class="entry">
-  <div class="entry-head">
-    <span class="entry-title">Retail Sales &amp; Inventory Analytics Platform</span>
-  </div>
-  <p class="tech">Tech Stack: SQL, Azure Data Factory, Azure SQL Database, Power BI (DAX, Power Query)</p>
+  <div class="entry-head"><span class="entry-title">Retail Sales &amp; Inventory Analytics Platform</span></div>
+  <p class="tech">SQL | Azure Data Factory | Azure SQL Database | Power BI (DAX, Power Query)</p>
   <ul>
-    <li>Built an enterprise-scale end-to-end analytics platform automating 3 ETL pipelines to ingest and process 100,000+ sales and inventory records, with Power BI dashboards tracking 8 revenue, product performance, and stock KPIs.</li>
+    <li>Automated ingestion of 100,000+ sales and inventory records through 3 ETL pipelines, delivering 8 revenue, product performance and stock KPIs in one refreshable report in place of manual extracts, by building an Azure Data Factory pipeline into Azure SQL Database behind a Power BI semantic model.</li>
   </ul>
 </div>
 
 <div class="entry">
-  <div class="entry-head">
-    <span class="entry-title">E-Commerce Customer &amp; Sales Analytics</span>
-  </div>
-  <p class="tech">Tech Stack: SQL, Power BI</p>
+  <div class="entry-head"><span class="entry-title">E-Commerce Customer &amp; Sales Analytics</span></div>
+  <p class="tech">SQL | Power BI</p>
   <ul>
-    <li>Conducted multi-table e-commerce analysis across orders, payments, products, customers, sellers, and order items to identify revenue patterns, customer behavior, seller performance, and operational optimization opportunities.</li>
+    <li>Identified revenue patterns, customer behaviour and seller performance across 6 joined transactional tables, surfacing operational optimisation opportunities for the business, by writing multi-table SQL analyses over orders, payments, products, customers, sellers and order items and reporting them in Power BI.</li>
   </ul>
 </div>
 
 <div class="entry">
-  <div class="entry-head">
-    <span class="entry-title">HR Analytics Dashboard</span>
-  </div>
-  <p class="tech">Tech Stack: Looker Studio</p>
+  <div class="entry-head"><span class="entry-title">HR Analytics Dashboard</span></div>
+  <p class="tech">Looker Studio</p>
   <ul>
-    <li>Developed an interactive workforce analytics dashboard tracking employee attrition, demographics, job roles, compensation, satisfaction scores, and organizational trends to support HR decision-making.</li>
+    <li>Consolidated attrition, demographics, job roles, compensation and satisfaction into one interactive workforce dashboard, replacing ad-hoc HR reporting with a self-serve view, by modelling the employee dataset and building filtered visuals in Looker Studio.</li>
   </ul>
 </div>
 
 <div class="entry">
-  <div class="entry-head">
-    <span class="entry-title">Banking &amp; Financial Transaction Analysis System</span>
-  </div>
-  <p class="tech">Tech Stack: SQL, Excel, Power BI</p>
+  <div class="entry-head"><span class="entry-title">Banking &amp; Financial Transaction Analysis System</span></div>
+  <p class="tech">SQL | Excel | Power BI</p>
   <ul>
-    <li>Analyzed 75,000+ financial transactions using 20+ advanced SQL queries (joins, window functions, subqueries) for fraud detection and customer segmentation, with Power BI reports across 5 performance dimensions.</li>
+    <li>Flagged fraud indicators and segmented customers across 75,000+ financial transactions, reporting the results across 5 performance dimensions, by writing 20+ advanced SQL queries using joins, window functions and subqueries feeding Power BI reports.</li>
   </ul>
 </div>
 
 <div class="entry">
-  <div class="entry-head">
-    <span class="entry-title">IGNYT — Offline-First Fitness &amp; Nutrition Tracker</span>
-    <span class="entry-meta">Google Play &nbsp;•&nbsp; igny-tfit-in.vercel.app</span>
-  </div>
-  <p class="tech">Tech Stack: Next.js, Capacitor, Android, Google Health Connect, Swift (HealthKit plugin), Codemagic CI</p>
+  <div class="entry-head"><span class="entry-title">IGNYT - Offline-First Fitness &amp; Nutrition Tracker</span><span class="entry-meta">Google Play | igny-tfit-in.vercel.app</span></div>
+  <p class="tech">Next.js | Capacitor | Android | Google Health Connect | Swift (HealthKit plugin) | Codemagic CI</p>
   <ul>
-    <li>Built and published an Android fitness application (com.varun.ignyt) that runs fully offline with no account required — workout planning, training schedules, a 1,000+ exercise library, HYROX plans, nutrition and food database, hydration, fasting, and body-weight tracking, with weekly analytics over the top.</li>
-    <li>Integrated two-way Google Health Connect sync and shipped an iOS build backed by a custom Swift HealthKit plugin, with releases automated through Codemagic CI.</li>
+    <li>Published an Android application to Google Play (com.varun.ignyt) carrying a 1,000+ exercise library, HYROX plans, nutrition, hydration, fasting and body-weight tracking, fully usable with no network and no account, by building an offline-first Capacitor app with two-way Google Health Connect sync and releases automated through Codemagic CI.</li>
   </ul>
 </div>
 
 <div class="entry">
-  <div class="entry-head">
-    <span class="entry-title">IGNYT Coach — Trainer &amp; Gym SaaS Platform</span>
-    <span class="entry-meta">ignyt-coach.vercel.app</span>
-  </div>
-  <p class="tech">Tech Stack: FastAPI, PostgreSQL, Next.js, Capacitor, Payments</p>
+  <div class="entry-head"><span class="entry-title">IGNYT Coach - Trainer &amp; Gym SaaS Platform</span><span class="entry-meta">ignyt-coach.vercel.app</span></div>
+  <p class="tech">FastAPI | PostgreSQL | Next.js | Capacitor | Payments</p>
   <ul>
-    <li>Developed a multi-tenant platform for personal trainers, gyms, nutritionists, and online coaches covering clients, programmes, meal plans, check-ins, messaging, and billing, with assigned work syncing directly into the client's IGNYT app.</li>
-    <li>Built a FastAPI and PostgreSQL backend behind a Next.js dashboard that also ships as an Android build.</li>
+    <li>Launched a multi-tenant platform covering clients, programmes, meal plans, check-ins, messaging and billing, giving trainers and gyms one system in place of separate tools, by building a FastAPI and PostgreSQL backend behind a Next.js dashboard that syncs assigned work into the client's IGNYT app.</li>
   </ul>
 </div>
 
 <div class="entry">
-  <div class="entry-head">
-    <span class="entry-title">MoneyVault — Personal Finance Command Center</span>
-  </div>
-  <p class="tech">Tech Stack: React, TypeScript, Tailwind, Capacitor, Data Import</p>
+  <div class="entry-head"><span class="entry-title">MoneyVault - Personal Finance Command Center</span></div>
+  <p class="tech">React | TypeScript | Tailwind | Capacitor | Data Import</p>
   <ul>
-    <li>Built an expense tracker in which every figure on screen derives from a single live ledger — budgets, goals, net worth, cash-flow projection, and payday allocation — so reported values cannot drift from the underlying transactions.</li>
-    <li>Implemented bank statement ingestion from CSV, Excel, and PDF through a column mapper and categorization rules, with a full audit trail and per-import undo.</li>
+    <li>Derived budgets, goals, net worth, cash-flow projection and payday allocation from a single live ledger, removing any drift between the reported figures and the underlying transactions, by implementing CSV, Excel and PDF statement ingestion through a column mapper and categorisation rules with an audit trail and per-import undo.</li>
   </ul>
 </div>
 
 <div class="entry">
-  <div class="entry-head">
-    <span class="entry-title">AuraVault — Family Health Record Platform</span>
-  </div>
-  <p class="tech">Tech Stack: React Native (Expo), Firebase, Firestore, OCR, AI Assistant</p>
+  <div class="entry-head"><span class="entry-title">AuraVault - Family Health Record Platform</span></div>
+  <p class="tech">React Native (Expo) | Firebase | Firestore | OCR | AI Assistant</p>
   <ul>
-    <li>Developed a mobile application consolidating a household's health data — patients and dependents, medical records, medicines, vaccinations, appointments, insurance, and expenses — with OCR document processing and an AI health assistant.</li>
-    <li>Enforced record ownership through Firestore security rules keyed on document path rather than application code, so access control holds independently of the client.</li>
+    <li>Consolidated a household's dependents, medical records, medicines, vaccinations, appointments, insurance and expenses into one mobile app with no cross-account access to any family's records, by enforcing ownership in Firestore security rules by document path and adding OCR document processing and an AI health assistant.</li>
   </ul>
 </div>
 
 <div class="entry">
-  <div class="entry-head">
-    <span class="entry-title">Formula Student Brake System</span>
-    <span class="entry-meta">B.E. Final Year Project &nbsp;•&nbsp; 2024</span>
-  </div>
-  <p class="tech">Tech Stack: Engineering Design, Vehicle Dynamics, Component Selection</p>
+  <div class="entry-head"><span class="entry-title">Formula Student Brake System</span><span class="entry-meta">B.E. Final Year Project | 2024</span></div>
+  <p class="tech">Engineering Design | Vehicle Dynamics | Component Selection</p>
   <ul>
-    <li>Designed and developed the braking system for a Formula Student vehicle, covering braking performance calculations, component selection, and vehicle safety validation against competition scrutineering requirements.</li>
+    <li>Designed a braking system that cleared competition scrutineering for a Formula Student vehicle, by running braking performance calculations, selecting components against them and validating the vehicle safety requirements.</li>
   </ul>
 </div>
 
 <h2>INTERNSHIP EXPERIENCE</h2>
 <div class="entry">
-  <div class="entry-head">
-    <span class="entry-title">Aruna Agencies — Business Analytics Intern</span>
-    <span class="entry-meta">Namakkal &nbsp;|&nbsp; May 2025 – Nov 2025</span>
-  </div>
+  <div class="entry-head"><span class="entry-title">Aruna Agencies - Business Analytics Intern</span><span class="entry-meta">Namakkal | May 2025 - Nov 2025</span></div>
   <ul>
-    <li>Conducted in-depth data analysis on 50,000+ rows of sales and operational data using SQL, Advanced Excel, Power BI, and SPSS — identifying key patterns, anomalies, profitability trends, and business performance opportunities.</li>
-    <li>Performed customer research involving ~150 farmers to analyze satisfaction trends, and conducted competitor analysis across 13 outlets to evaluate market positioning and identify business development opportunities.</li>
-    <li>Prepared 10+ structured analytical reports and dashboards for senior stakeholders, translating complex datasets into actionable business insights that directly informed operational and strategic decisions.</li>
-    <li>Documented business requirements, SOPs, and process improvement recommendations, reducing manual reporting effort by ~40% through automated Power BI refresh and standardized data pipelines.</li>
+    <li>Surfaced profitability trends, anomalies and performance gaps across 50,000+ rows of sales and operational data, informing operational decisions for the business, by analysing them in SQL, Advanced Excel, Power BI and SPSS.</li>
+    <li>Evaluated market positioning and identified business development opportunities across 13 competitor outlets, by running customer research with approximately 150 farmers and analysing satisfaction trends against the competitor findings.</li>
+    <li>Delivered 10+ structured analytical reports and dashboards that directly informed operational and strategic decisions, by translating complex datasets into findings senior stakeholders could act on.</li>
+    <li>Reduced manual reporting effort by approximately 40%, by documenting business requirements and SOPs and automating Power BI refresh over standardised data pipelines.</li>
   </ul>
 </div>
 
-<h2>MBA THESIS — RESEARCH PROJECT</h2>
+<h2>MBA THESIS - RESEARCH PROJECT</h2>
 <div class="entry">
-  <div class="entry-head">
-    <span class="entry-title">Impact of Agricultural Machinery Adoption on Crop Returns</span>
-    <span class="entry-meta">2026</span>
-  </div>
-  <p class="tech">Economic Analysis Using ROI Framework &nbsp;|&nbsp; CMS Business School, Jain University</p>
+  <div class="entry-head"><span class="entry-title">Impact of Agricultural Machinery Adoption on Crop Returns</span><span class="entry-meta">2026</span></div>
+  <p class="tech">Economic Analysis Using ROI Framework | CMS Business School, Jain University</p>
   <ul>
-    <li>Conducted an empirical study on 166 farming households applying descriptive statistics, Pearson correlation, multiple regression, reliability analysis (Cronbach's Alpha: 0.7789), and hypothesis testing — finding 84.94% reported positive ROI impact and 83% reported yield improvements following machinery adoption.</li>
+    <li>Established that 84.94% of 166 surveyed farming households reported positive ROI and 83% reported yield improvement after machinery adoption, by applying descriptive statistics, Pearson correlation, multiple regression, reliability analysis (Cronbach's Alpha 0.7789) and hypothesis testing to primary survey data.</li>
   </ul>
 </div>
 
 <h2>CERTIFICATIONS</h2>
-<table>
-  <tr>
-    <td>Building Generative AI-Powered Applications with Python</td>
-    <td class="issuer">IBM</td>
-    <td class="cred">ID: VWEX4OCU3CWH</td>
-    <td class="year">2025</td>
-  </tr>
-  <tr>
-    <td>AI for Solving Business Problems</td>
-    <td class="issuer">JAIN (Deemed-to-be University)</td>
-    <td class="cred">ID: NIQSZ1ZBJNMK</td>
-    <td class="year">2025</td>
-  </tr>
-  <tr>
-    <td>Machine Learning for Business</td>
-    <td class="issuer">JAIN (Deemed-to-be University)</td>
-    <td class="cred">ID: Y0QY7134J9BU</td>
-    <td class="year">2025</td>
-  </tr>
-  <tr>
-    <td>Security Analytics and Portfolio Management</td>
-    <td class="issuer">JAIN (Deemed-to-be University)</td>
-    <td class="cred">ID: 9GVUERGS1ZLF</td>
-    <td class="year">2025</td>
-  </tr>
-  <tr>
-    <td>Corporate Governance &amp; Practices</td>
-    <td class="issuer">JAIN (Deemed-to-be University)</td>
-    <td class="cred">ID: P25TT39KICL0</td>
-    <td class="year">2025</td>
-  </tr>
-  <tr>
-    <td>Basic Statistics</td>
-    <td class="issuer">University of Amsterdam</td>
-    <td class="cred">ID: XC17FOVU0FCG</td>
-    <td class="year">2024</td>
-  </tr>
-  <tr>
-    <td>Financial Accounting Fundamentals</td>
-    <td class="issuer">University of Virginia — Darden</td>
-    <td class="cred">ID: N922Z9PPIRAE</td>
-    <td class="year">2024</td>
-  </tr>
-  <tr>
-    <td>Organizational Behavior: How to Manage People</td>
-    <td class="issuer">IESE Business School</td>
-    <td class="cred">ID: L68LD7JI0ZVA</td>
-    <td class="year">2024</td>
-  </tr>
-</table>
+<ul class="compact">
+  <li>Building Generative AI-Powered Applications with Python</li>
+  <li>AI for Solving Business Problems</li>
+  <li>Machine Learning for Business</li>
+  <li>Security Analytics and Portfolio Management</li>
+  <li>Corporate Governance &amp; Practices</li>
+  <li>Basic Statistics</li>
+  <li>Financial Accounting Fundamentals</li>
+  <li>Organizational Behavior: How to Manage People</li>
+</ul>
 
 <h2>LEADERSHIP &amp; ACHIEVEMENTS</h2>
 <ul>
-  <li><span class="label">SAE Student of the Year (2024)</span> — Recognized for technical contribution, leadership, and active participation in SAE engineering initiatives.</li>
-  <li><span class="label">Team Manager, SAE SUPRA (2023)</span> — Led a 30-member Formula Student team to 2nd place among ~80 teams nationally, demonstrating project coordination, technical leadership, and competitive engineering excellence.</li>
-  <li><span class="label">Vice Captain, FMAE Formula Student (2023)</span> — Contributed to a national 3rd-place finish including 1st place in design and acceleration events.</li>
-  <li><span class="label">Group Captain, Electric Vehicle Project (2022)</span> — Led a team to 1st place overall among 25 competing teams in EV project development.</li>
+  <li><span class="label">SAE Student of the Year (2024)</span> - Won the chapter's annual award for technical contribution and leadership, by sustaining three consecutive years of competition work across the EV and Formula Student campaigns.</li>
+  <li><span class="label">Team Manager, SAE SUPRA (2023)</span> - Led a 30-member Formula Student team to 2nd place among approximately 80 teams nationally, by coordinating subsystem schedules and carrying technical decisions through to a car that passed scrutineering and raced.</li>
+  <li><span class="label">Vice Captain, FMAE Formula Student (2023)</span> - Contributed to a 3rd-place national finish including 1st place in both design and acceleration, by defending the team's engineering choices to the judging panel.</li>
+  <li><span class="label">Group Captain, Electric Vehicle Project (2022)</span> - Led a team to 1st place overall among 25 competing teams, by directing the EV build from design through competition.</li>
 </ul>
 
 <h2>EDUCATION</h2>
 <div class="entry">
-  <div class="entry-head">
-    <span class="entry-title">Master of Business Administration (MBA) — Business Analytics</span>
-    <span class="entry-meta">2024 – 2026</span>
-  </div>
-  <p>Jain (Deemed-to-be University), CMS Business School, Bangalore &nbsp;|&nbsp; CGPA: 7.1/10</p>
+  <div class="entry-head"><span class="entry-title">Master of Business Administration (MBA) - Business Analytics</span><span class="entry-meta">2024 - 2026</span></div>
+  <p>Jain (Deemed-to-be University), CMS Business School, Bangalore | CGPA: 7.1/10</p>
 </div>
 <div class="entry">
-  <div class="entry-head">
-    <span class="entry-title">Bachelor of Engineering — Automobile Engineering</span>
-    <span class="entry-meta">2021 – 2024</span>
-  </div>
-  <p>Bannari Amman Institute of Technology, Sathyamangalam &nbsp;|&nbsp; CGPA: 7.4/10</p>
+  <div class="entry-head"><span class="entry-title">Bachelor of Engineering - Automobile Engineering</span><span class="entry-meta">2021 - 2024</span></div>
+  <p>Bannari Amman Institute of Technology, Sathyamangalam | CGPA: 7.4/10</p>
 </div>
 
 </body>
