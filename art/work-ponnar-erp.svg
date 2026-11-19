@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="Six branches connected to a central ledger">
+  <defs>
+    <linearGradient id="erpStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#89AACC"/><stop offset="1" stop-color="#4E85BF"/>
+    </linearGradient>
+    <radialGradient id="erpGlow" cx="0.5" cy="0.46" r="0.62">
+      <stop offset="0" stop-color="#89AACC" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#89AACC" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="800" fill="#0a0a0a"/>
+  <rect width="1200" height="800" fill="url(#erpGlow)"/>
+
+  <!-- Faint ledger ruling: the cash book under everything else. -->
+  <g stroke="#89AACC" stroke-opacity="0.07">
+    <path d="M120 150H1080M120 230H1080M120 310H1080M120 390H1080M120 470H1080M120 550H1080M120 630H1080"/>
+  </g>
+
+  <!-- Spokes from the head office to each branch. -->
+  <g stroke="url(#erpStroke)" stroke-opacity="0.5" stroke-width="1.6" fill="none">
+    <path d="M600 400 L300 230"/>
+    <path d="M600 400 L300 570"/>
+    <path d="M600 400 L600 180"/>
+    <path d="M600 400 L600 620"/>
+    <path d="M600 400 L900 230"/>
+    <path d="M600 400 L900 570"/>
+  </g>
+
+  <!-- Branch nodes. -->
+  <g fill="#0a0a0a" stroke="url(#erpStroke)" stroke-width="2">
+    <rect x="252" y="200" width="96" height="60" rx="8"/>
+    <rect x="252" y="540" width="96" height="60" rx="8"/>
+    <rect x="552" y="150" width="96" height="60" rx="8"/>
+    <rect x="552" y="590" width="96" height="60" rx="8"/>
+    <rect x="852" y="200" width="96" height="60" rx="8"/>
+    <rect x="852" y="540" width="96" height="60" rx="8"/>
+  </g>
+  <g fill="#89AACC" fill-opacity="0.5">
+    <rect x="268" y="218" width="44" height="5" rx="2.5"/><rect x="268" y="233" width="28" height="5" rx="2.5"/>
+    <rect x="268" y="558" width="44" height="5" rx="2.5"/><rect x="268" y="573" width="28" height="5" rx="2.5"/>
+    <rect x="568" y="168" width="44" height="5" rx="2.5"/><rect x="568" y="183" width="28" height="5" rx="2.5"/>
+    <rect x="568" y="608" width="44" height="5" rx="2.5"/><rect x="568" y="623" width="28" height="5" rx="2.5"/>
+    <rect x="868" y="218" width="44" height="5" rx="2.5"/><rect x="868" y="233" width="28" height="5" rx="2.5"/>
+    <rect x="868" y="558" width="44" height="5" rx="2.5"/><rect x="868" y="573" width="28" height="5" rx="2.5"/>
+  </g>
+
+  <!-- Head office. -->
+  <circle cx="600" cy="400" r="74" fill="#0a0a0a" stroke="url(#erpStroke)" stroke-width="2.5"/>
+  <circle cx="600" cy="400" r="104" fill="none" stroke="#89AACC" stroke-opacity="0.22" stroke-width="1"/>
+  <g stroke="#89AACC" stroke-opacity="0.75" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <path d="M572 418 L572 386"/>
+    <path d="M589 418 L589 372"/>
+    <path d="M606 418 L606 394"/>
+    <path d="M623 418 L623 380"/>
+  </g>
+  <path d="M566 432 H634" stroke="#89AACC" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
+</svg>

@@ -256,6 +256,40 @@ export const works: Work[] = [
     span: "md:col-span-5",
     aspect: "aspect-[4/3] md:aspect-[16/10]",
   },
+  {
+    no: "11",
+    title: "Ponnar Sankar ERP",
+    kind: "Production System • React + Firebase + Cloud Run",
+    subtitle: "One system for a six-branch tractor dealership",
+    body: "A business in daily use, not a demo: counter sales, invoices and quotations, machine sales and delivery, stock across shops and warehouses, service job cards and warranty, cash book and ledgers, payroll and attendance, WhatsApp messages to customers, an assistant that answers in English and Tamil, and a 3D map of the whole operation. Runs on Google Cloud Run with Firebase Auth and Firestore, installable on phones and shipped as an Android app. The base code is published separately so anyone can fork it.",
+    tags: ["React 19", "TypeScript", "Firebase", "Cloud Run", "PostgreSQL", "WhatsApp API"],
+    image: "/art/work-ponnar-erp.svg",
+    href: "https://github.com/varun642002/erp-starter-kit",
+    linkLabel: "View the open base code",
+    span: "md:col-span-7",
+    aspect: "aspect-[4/3] md:aspect-[16/10]",
+    stats: [
+      { value: "6", label: "branches" },
+      { value: "Live", label: "ponnarsankarerp.in" },
+    ],
+  },
+  {
+    no: "12",
+    title: "Claude Code Developer Tools",
+    kind: "Open Source • 10 published tools",
+    subtitle: "Ten tools for the Claude Code ecosystem",
+    body: "A suite of tools built and published as public repositories: persistent project memory, token and cost analysis, full-text search across every session transcript, a hook that stops credentials reaching the model's context, a standup generator, a blast-radius warning before wide changes, a gate that refuses to close a session on a red build, a CLAUDE.md writer that states only what it observed, an environment doctor, and a linted library of shared slash commands. Every one is dependency-free and tested on Ubuntu, Windows and macOS across Node 18, 20 and 22.",
+    tags: ["Node.js", "Developer Tooling", "CI", "Zero Dependencies", "Open Source"],
+    image: "/art/work-claude-tools.svg",
+    href: "https://github.com/varun642002?tab=repositories",
+    linkLabel: "View the repositories",
+    span: "md:col-span-5",
+    aspect: "aspect-[4/3] md:aspect-[16/10]",
+    stats: [
+      { value: "10", label: "public repos" },
+      { value: "9", label: "CI targets each" },
+    ],
+  },
 ];
 
 export const experience = [
