@@ -36,7 +36,7 @@ copyFileSync(resolve(dist, "index.html"), resolve(root, "404.html"));
 
 // Give each client-side route a real entry point too, so it answers 200
 // instead of falling through the 404 handler.
-for (const route of ["studio"]) {
+for (const route of ["studio", "classic"]) {
   mkdirSync(resolve(root, route), { recursive: true });
   copyFileSync(resolve(dist, "index.html"), resolve(root, route, "index.html"));
 }
@@ -65,6 +65,10 @@ for (const [from, to] of Object.entries(REDIRECTS)) {
 `,
   );
 }
+
+// The homepage is the animated portfolio (app/home/index.html), not the React
+// build. The React site still answers at /classic/ and on every other route.
+copyFileSync(resolve(here, "../home/index.html"), resolve(root, "index.html"));
 
 // Stop Pages from running the output through Jekyll.
 writeFileSync(resolve(root, ".nojekyll"), "");

@@ -19,6 +19,7 @@ export default function App() {
       <motion.div key={location.pathname} {...pageTransition}>
         <Routes location={location}>
           <Route path="/" element={<Index />} />
+          <Route path="/classic" element={<Index />} />
           <Route path="/studio" element={<Studio />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
