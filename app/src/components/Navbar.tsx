@@ -119,6 +119,13 @@ export default function Navbar() {
             Resume
           </a>
 
+          <a
+            href="https://varun642002.github.io/portfolio/"
+            className="hidden rounded-full border border-[#FF5A1F]/60 px-2.5 py-1.5 text-xs text-[#FF5A1F] transition-colors duration-200 hover:bg-[#FF5A1F] hover:text-white sm:block sm:px-4 sm:py-2 sm:text-sm"
+          >
+            New portfolio ↗
+          </a>
+
           <button
             onClick={() => setMenuOpen(true)}
             aria-label="Open menu"
@@ -209,6 +216,12 @@ export default function Navbar() {
                 className="text-sm text-muted transition-colors duration-200 hover:text-text-primary"
               >
                 Resume ↗
+              </a>
+              <a
+                href="https://varun642002.github.io/portfolio/"
+                className="text-sm text-[#FF5A1F] transition-colors duration-200 hover:text-text-primary"
+              >
+                New portfolio ↗
               </a>
               {site.socials.map((social) => (
                 <a
